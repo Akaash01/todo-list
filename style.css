@@ -33,7 +33,7 @@ header {
 }
 header,
 form {
-  min-height: 20vh;
+  height: 20vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -44,6 +44,7 @@ form button {
   padding: 0.5rem;
   font-size: 2rem;
   border: none;
+  outline: none;
   background: #fff;
 }
 
@@ -78,6 +79,9 @@ form button:hover {
 }
 .todo li {
   flex: 1;
+  overflow-wrap: wrap;
+}
+.item {
 }
 .del-btn,
 .cmp-btn {
@@ -135,7 +139,7 @@ select {
 
 .footer {
   position: absolute;
-  bottom: 20px;
+  bottom: 40px;
   width: 100%;
   justify-self: flex-end;
 }
@@ -143,7 +147,69 @@ select {
   text-align: center;
 }
 @media (max-width: 458px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+    justify-content: space-between;
+    overflow-x: hidden;
+  }
   .input-item {
-    width: 75vw;
+    width: 70vw;
+  }
+  header h1 {
+    font-size: 4rem;
+  }
+  header {
+    height: 4.1rem;
+  }
+  form {
+    flex-direction: column;
+  }
+  .input-item {
+    padding: 0px;
+  }
+  .inputdiv {
+    height: 2.5rem;
+  }
+  select {
+    font-size: 1rem;
+    padding: 0.2rem 1.5rem;
+  }
+  .options::after {
+    font-size: 0.77rem;
+    padding: 0.15rem;
+    pointer-events: none;
+  }
+  .input-item {
+    font-size: 1.5rem;
+    padding: 0rem 1rem;
+  }
+  .container {
+    width: 20rem;
+  }
+  .list {
+    min-width: 10rem;
+  }
+  .todo-button {
+    padding: 0px 5px;
+  }
+  .item {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .footer {
+    position: absolute;
+  }
+  .del-btn,
+  .cmp-btn {
+    background: #f75626;
+    color: #fff;
+    border: none;
+    padding: 0.7rem;
+    cursor: pointer;
+    font-size: 0.7rem;
+  }
+  .cmp-btn {
+    background: rgb(52, 179, 27);
   }
 }
