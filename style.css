@@ -1,0 +1,149 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(
+    140deg,
+    #ffb900 15.8%,
+    #242424 16%,
+    #242424 85%,
+    #ffb900 85.3%
+  );
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+@font-face {
+  font-family: mainFont;
+  src: url(./font/Billy\ Ohio.ttf);
+}
+header {
+  font-size: 3.5rem;
+  font-family: mainFont;
+}
+.inputdiv {
+  background: #fff;
+}
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: #fff;
+}
+
+form button {
+  color: #ffb900;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.3 ease;
+}
+form button:hover {
+  background: #ffb900;
+  color: #fff;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list {
+  min-width: 23rem;
+  list-style: none;
+}
+.todo {
+  margin: 0.5rem;
+  color: black;
+  background: #fff;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.todo li {
+  flex: 1;
+}
+.del-btn,
+.cmp-btn {
+  background: #f75626;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.cmp-btn {
+  background: rgb(52, 179, 27);
+}
+.item {
+  padding: 0rem 0.5rem;
+}
+.fa-check,
+.fa-trash {
+  pointer-events: none;
+}
+.completed-item {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.del-trans {
+  transform: translateX(5rem);
+  opacity: 0;
+}
+select {
+  outline: none;
+  border: none;
+  appearance: none;
+  font-size: 1.2rem;
+  padding: 0.5rem 2.5rem;
+}
+.options {
+  position: relative;
+  margin: 0.5rem;
+}
+.options::after {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  content: "\25BC";
+  color: white;
+  background: #ffb900;
+  font-size: 1rem;
+  padding: 0.35rem;
+  pointer-events: none;
+}
+.options:hover::after {
+  background: white;
+  color: #ffb900;
+}
+
+.footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  justify-self: flex-end;
+}
+.footer h3 {
+  text-align: center;
+}
+@media (max-width: 458px) {
+  .input-item {
+    width: 75vw;
+  }
+}
